@@ -1,0 +1,62 @@
+# ============================================================================
+# CẤU HÌNH MCP SERVER - ĐÂY LÀ NƠI DUY NHẤT ĐỂ CHỈNH SỬA URL VÀ TIMEOUT
+# ============================================================================
+# Agent sẽ tự động đọc cấu hình từ file này khi khởi động.
+# Có thể override bằng biến môi trường MCP_SERVER_URL và MCP_TIMEOUT.
+# ============================================================================
+
+mcp_server:
+  url: "https://mcp-server-vietnam-stock-trading.onrender.com"
+  transport: "streamable-http"
+  timeout: 30
+
+# Danh sách tools có sẵn
+tools:
+  company:
+    - get_company_overview
+    - get_company_news
+    - get_company_events
+    - get_company_shareholders
+    - get_company_officers
+    - get_company_subsidiaries
+    - get_company_reports
+    - get_company_dividends
+    - get_company_insider_deals
+    - get_company_ratio_summary
+    - get_company_trading_stats
+
+  quote:
+    - get_quote_history_price
+    - get_quote_intraday_price
+    - get_quote_price_depth
+
+  finance:
+    - get_income_statements
+    - get_balance_sheets
+    - get_cash_flows
+    - get_finance_ratios
+    - get_raw_report
+
+  fund:
+    - list_all_funds
+    - search_fund
+    - get_fund_nav_report
+    - get_fund_top_holding
+    - get_fund_industry_holding
+    - get_fund_asset_holding
+
+  listing:
+    - get_all_symbol_groups
+    - get_all_industries
+    - get_all_symbols_by_group
+    - get_all_symbols_by_industry
+    - get_all_symbols
+
+  trading:
+    - get_price_board
+
+  misc:
+    - get_gold_price
+    - get_exchange_rate
+# Tổng số tools: 32
+
